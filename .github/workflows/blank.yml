@@ -1,0 +1,43 @@
+name: Elastic Runners
+
+on:
+  push: 
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  
+jobs:
+  build:
+    runs-on: 
+      - self-hosted
+      - build
+    containers:
+      image: ubuntu
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: run a one liner
+        run: echo "This runner will self destroy in 3 2 1..."
+        
+  test:
+    runs-on: 
+      - self-hosted
+      - test
+    containers:
+      image: ubuntu
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: run a one liner
+        run: echo "This runner will self destroy in 3 2 1..."
+   
+  publish:
+    runs-on: [self-hosted, publish]
+    containers:
+      image: centos
+     needs: [build, test]
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: run a one liner
+        run: echo "This runner will self destroy in 3 2 1..." 
