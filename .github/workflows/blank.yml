@@ -35,7 +35,7 @@ jobs:
     runs-on: [self-hosted, publish]
     container:
       image: centos
-     needs: [build, test]
+    needs: [build, test]
     steps:
       - uses: actions/checkout@v2
       
