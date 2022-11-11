@@ -49,3 +49,7 @@ In the Payload URL paste the Cloud Build Webhook Trigger copied from the Trigger
 Now scroll down and click on _"Let me select individual events."_ we only wan to get triggered when a job is queued so we only click on **Workflow jobs** make sure Active is selected and click on Add webhook
 
 ![add-webhook-2](https://user-images.githubusercontent.com/2351518/146523790-b0115443-3ec8-4965-af9b-f3149ccce178.png)
+
+! self-hosted runner registered on github console
+<img width="1269" alt="Screenshot 2022-11-11 at 5 47 38 PM" src="https://user-images.githubusercontent.com/31533789/201340712-439cf8f5-1679-4e40-b629-67d1e320c872.png">
+
